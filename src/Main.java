@@ -1,28 +1,21 @@
 /* Написать программу, которая выводила бы консоль звездочки, следующим образом
-
  * * * * *
-
  * * * * *
-
  * * * * *
-
  */
 public class Main {
     public static void main(String[] args) {
-        int str = 3, num = 0;
-        int col = 5;
-        String symb = "*";
-        System.out.println();
-        while (num < str) {
-            for (int i = 0; i < col; i++) {
-                if (i == col - 1) {
-                    System.out.print(symb + "\n");
-                    System.out.println();
+        String[][] mas = new String[3][5];
+        for (int i = 0; i < mas.length; i++) {
+            System.out.println();
+            for (int j = 0; j < mas[i].length; j++) {
+                mas[i][j] = "*";
+                if (j == mas[i].length - 1) {
+                    System.out.print(mas[i][j] + "\n");
                 } else {
-                    System.out.print(symb + " ");
+                    System.out.print(mas[i][j] + " ");
                 }
             }
-            num++;
         }
     }
 }
